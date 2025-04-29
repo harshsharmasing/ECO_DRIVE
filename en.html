@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Role of Eco-Driving in Combating Climate Change</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and base styles with improved typography */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2E7D32;
+            --primary-light: #4CAF50;
+            --accent: #2d06ef;
+            --text-dark: #1a1a1a;
+            --text-light: #f8f8f8;
+            --gray-light: #f5f5f5;
+            --gray: #e5e5e5;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+            background-color: #fdfdfd;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Enhanced Navbar styles with subtle shadow */
+        .navbar {
+            position: fixed;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            z-index: 1000;
+            border-bottom: none;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            padding: 0 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: 2px;
+            position: relative;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .logo-text::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 30%;
+            height: 3px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+
+        .logo-text:hover::after {
+            width: 100%;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            margin: 0 1.2rem;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 1.8rem;
+        }
+
+        .icon {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .icon i {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        .icon::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transform: translateX(-50%);
+            transition: var(--transition);
+        }
+
+        .icon:hover i {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .icon:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .mobile-menu {
+            display: none;
+            padding: 1.5rem;
+            background: white;
+            box-shadow: var(--shadow);
+            border-radius: 0 0 8px 8px;
+        }
+
+        /* Article Header */
+        .article-header {
+            height: 50vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/600');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding-top: 70px;
+        }
+
+        .article-header-content {
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .article-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Article Content */
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .article-content h2 {
+            font-size: 2rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary);
+        }
+
+        .article-content h3 {
+            font-size: 1.5rem;
+            margin: 1.8rem 0 1rem;
+            color: var(--text-dark);
+        }
+
+        .article-content ul, .article-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background-color: var(--gray-light);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            color: white;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .cta-box p {
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            padding: 0.85rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            border: none;
+            border-radius: 4px;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-white:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Enhanced Footer */
+        .footer {
+            background: #1a1a1a;
+            color: #f5f5f5;
+            padding: 5rem 0 3rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-light);
+            font-size: 1.3rem;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--primary-light);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+            padding: 0.3rem 0;
+            display: inline-block;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-light);
+            transform: translateX(5px);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #ccc;
+            transition: var(--transition);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .social-icon:hover {
+            color: white;
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .footer-bottom .logo-text {
+            color: white;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: #999;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-light);
+        }
+
+        /* Responsive design */
+        @media (max-width: 992px) {
+            .desktop-nav {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .mobile-menu.active {
+                display: block;
+            }
+
+            .article-header h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .article-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .article-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .footer-bottom {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .article-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .article-content {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo-text">ECO-DRIVE</a>
+            <div class="nav-links desktop-nav">
+                <a href="home.php">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.php">Contact</a>
+            </div>
+            <div class="nav-icons">
+                
+                <div class="icon">
+                        
+                </div>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="mobile-menu">
+            <a href="#">Home</a>
+            <a href="#">Articles</a>
+            <a href="#">Resources</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="article-header">
+        <div class="article-header-content">
+            <h1>The Role of Eco-Driving in Combating Climate Change</h1>
+            <p>How small changes in driving habits can lead to significant environmental impacts</p>
+            <div class="article-meta">
+                <div class="meta-item">
+                    <i class="far fa-calendar"></i>
+                    <span>April 18, 2025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="far fa-user"></i>
+                    <span>By Sarah Johnson</span>
+                </div>
+                <div class="meta-item">
+                    <i class="far fa-clock"></i>
+                    <span>8 minute read</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <main class="article-content">
+        <p>
+            As the world faces increasingly urgent climate challenges, individuals are seeking ways to reduce their carbon footprint. While the transition to electric vehicles represents a significant step forward, most people worldwide still drive conventional vehicles. Eco-driving offers an immediate, accessible solution that anyone can implement today—regardless of what vehicle they drive.
+        </p>
+
+        <h2>What is Eco-Driving?</h2>
+        <p>
+            Eco-driving consists of techniques and behaviors that maximize fuel efficiency and minimize emissions while driving. It's a mindful approach to operating a vehicle that considers environmental impact alongside safety and efficiency. The concept is simple: small adjustments in driving habits can substantially reduce fuel consumption and greenhouse gas emissions.
+        </p>
+        
+        <p>
+            Research indicates that proper eco-driving techniques can reduce fuel consumption by 10-25% depending on the vehicle type and driving conditions. This translates to a proportional decrease in carbon dioxide emissions, making it one of the most accessible climate actions available to individual drivers.
+        </p>
+
+        <h2>Key Eco-Driving Techniques</h2>
+        
+        <h3>1. Smooth Acceleration and Deceleration</h3>
+        <p>
+            Aggressive driving with rapid acceleration and hard braking can increase fuel consumption by up to 40% in stop-and-go traffic. By accelerating gradually and anticipating traffic flow to avoid sudden braking, drivers can significantly reduce their vehicle's energy demands.
+        </p>
+
+        <h3>2. Maintain Consistent Speed</h3>
+        <p>
+            Maintaining a steady speed, particularly on highways, optimizes fuel efficiency. Using cruise control on appropriate roads helps eliminate the small, fuel-consuming speed fluctuations that occur with manual throttle control.
+        </p>
+
+        <h3>3. Optimal Speed Management</h3>
+        <p>
+            Fuel efficiency typically peaks between 50-80 km/h (30-50 mph) for most vehicles and decreases dramatically at higher speeds due to aerodynamic drag. Reducing highway speeds by just 10 km/h (6 mph) can improve fuel economy by 10-15%.
+        </p>
+
+        <div class="highlight-box">
+            <h3>Did You Know?</h3>
+            <p>Every liter of gasoline burned produces approximately 2.3 kg of CO₂. This means that improving your fuel economy by just 15% through eco-driving could prevent about 300 kg of CO₂ emissions annually for an average driver.</p>
+        </div>
+
+        <h3>4. Reduce Idling</h3>
+        <p>
+            Modern engines don't require lengthy warm-up periods. Idling for more than 10 seconds uses more fuel than restarting the engine. Many newer vehicles feature automatic start-stop systems that handle this automatically, but drivers of conventional vehicles can adopt this practice manually.
+        </p>
+
+        <h3>5. Proper Vehicle Maintenance</h3>
+        <p>
+            Regular maintenance ensures optimal engine performance. Properly inflated tires alone can improve fuel economy by 3%, while clean air filters and proper oil can contribute another 5-10% improvement.
+        </p>
+
+        <h2>The Climate Impact of Eco-Driving</h2>
+        <p>
+            If widely adopted, eco-driving could make a substantial contribution to climate change mitigation efforts. A study by the International Energy Agency suggests that if all drivers practiced eco-driving techniques, global CO₂ emissions from road transport could be reduced by up to 10% in the short term.
+        </p>
+        
+        <p>
+            This reduction becomes even more significant when considering that transportation accounts for approximately 24% of global CO₂ emissions from fuel combustion, with road vehicles responsible for nearly three-quarters of that figure.
+        </p>
+
+        <h2>Beyond Individual Action: Systemic Support for Eco-Driving</h2>
+        <p>
+            While individual driving behaviors form the core of eco-driving, supportive infrastructure and policy can amplify its benefits:
+        </p>
+
+        <ul>
+            <li><strong>Smart traffic management systems</strong> that reduce congestion and optimize traffic flow</li>
+            <li><strong>Eco-driving education</strong> integrated into driver training programs</li>
+            <li><strong>In-vehicle feedback systems</strong> that provide real-time guidance on efficient driving</li>
+            <li><strong>Incentive programs</strong> that reward efficient driving practices</li>
+        </ul>
+
+        <p>
+            Companies with vehicle fleets have reported fuel savings of 5-15% after implementing eco-driving training programs for their drivers, demonstrating the potential for eco-driving to deliver both environmental and economic benefits at scale.
+        </p>
+
+        <div class="cta-box">
+            <h3>Ready to Become an Eco-Driver?</h3>
+            <p>Join our community of environmentally conscious drivers making a difference with every trip. Get access to personalized tips, track your improvements, and connect with other eco-drivers.</p>
+            <a href="#" class="btn btn-white">Join the Movement</a>
+        </div>
+
+        <h2>Conclusion</h2>
+        <p>
+            Eco-driving represents a rare climate solution that requires no special equipment, is immediately accessible to almost everyone who drives, and delivers both environmental and economic benefits. While the transition to electric vehicles continues, eco-driving offers a bridge strategy that can deliver meaningful emissions reductions today.
+        </p>
+        
+        <p>
+            By adopting these techniques and encouraging others to do the same, drivers can contribute to climate change mitigation while also saving money and reducing stress behind the wheel. In the face of climate change, eco-driving reminds us that sometimes the most effective solutions are also the simplest.
+        </p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>We are dedicated to promoting sustainable transportation solutions and environmental awareness through education and community engagement.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="home.php">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="calc.html">CFC</a></li>
+                        <li><a href="logout.php">Log Out</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="footer-bottom">
+                <a href="#" class="logo-text">ECO-DRIVE</a>
+                
+                <p>&copy; 2025 ECO-DRIVE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.toggle('active');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
